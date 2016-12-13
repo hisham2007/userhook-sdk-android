@@ -17,6 +17,23 @@
             android:name=".MainActivity"
             android:launchMode="singleTop"
             android:label="@string/app_name">
+
+
+        </activity>
+
+        <activity android:name=".CustomFieldActivity"
+            android:parentActivityName=".MainActivity"
+            />
+        <activity android:name=".PurchaseActivity"
+            android:parentActivityName=".MainActivity"
+            />
+
+
+        <activity
+            android:name=".FakeSplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FakeSplashTheme" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -28,16 +45,6 @@
                 <data android:scheme="userhookdemo"/>
             </intent-filter>
         </activity>
-
-        <activity android:name=".CustomFieldActivity"
-            android:parentActivityName=".MainActivity"
-            />
-        <activity android:name=".PurchaseActivity"
-            android:parentActivityName=".MainActivity"
-            />
-
-
-
 
     </application>
 

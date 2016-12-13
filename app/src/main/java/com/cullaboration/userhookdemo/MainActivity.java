@@ -103,28 +103,7 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    /*
-    If your activity uses launchMode="singleTop", you will need to override the onNewIntent
-    with the code below to properly track push notifications opens
-     */
-    @Override
-    protected void onNewIntent(Intent intent) {
-        super.onNewIntent(intent);
-        setIntent(intent);
 
-        // check for deep link
-
-        if (intent.getAction().equals(Intent.ACTION_VIEW)) {
-            Uri uri = intent.getData();
-
-            // respond to deep link for url, userhookdemo://product
-            if (uri.getHost().equals("product")) {
-                Intent newIntent = new Intent(MainActivity.this, PurchaseActivity.class);
-                startActivity(newIntent);
-            }
-
-        }
-    }
 
     @Override
     public void onBackPressed() {
